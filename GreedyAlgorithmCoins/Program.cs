@@ -1,14 +1,16 @@
-﻿Console.WriteLine("Please write the price!");
-string priceSt = Console.ReadLine();
-Console.WriteLine("Please write the amount given to the cashier!");
-string moneyGivenSt = Console.ReadLine();
-double coin2 = 0;
+﻿double coin2 = 0;
 double coin1 = 0;
 double coin05 = 0;
 double coin01 = 0;
 double coin005 = 0;
 double coin002 = 0;
 double coin001 = 0;
+
+Console.WriteLine("Please write the price!");
+string priceSt = Console.ReadLine();
+Console.WriteLine("Please write the amount of money given to the cashier!");
+string moneyGivenSt = Console.ReadLine();
+
 
 bool priceParsed = double.TryParse(priceSt, out double price);
 bool moneyGivenParsed = double.TryParse(moneyGivenSt, out double moneyGiven);
@@ -19,10 +21,13 @@ Console.WriteLine();
 
 if (change < 0)
 { Console.WriteLine("The money you have given is not enough.");
-  Console.WriteLine($"You still need to pay Euro {change}");
+    Console.WriteLine($"You still need to pay Euro {change}");
 }
 
-else { Console.WriteLine($"The change is Euro {change}");
+else if (change == 0)
+{ Console.WriteLine("There is no change, you gave a precise amount of money."); }
+
+else { Console.WriteLine($"The change is Euro {change}"); 
 
 if (change >= 2)
     {coin2 = Math.Floor(change / 2);
