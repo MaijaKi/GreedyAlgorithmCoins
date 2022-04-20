@@ -1,7 +1,7 @@
 ﻿Console.WriteLine("Please write the price!");
-var priceSt = Console.ReadLine();
+string priceSt = Console.ReadLine();
 Console.WriteLine("Please write the amount given to the cashier!");
-var moneyGivenSt = Console.ReadLine();
+string moneyGivenSt = Console.ReadLine();
 double coin2 = 0;
 double coin1 = 0;
 double coin05 = 0;
